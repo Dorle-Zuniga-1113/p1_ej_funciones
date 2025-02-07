@@ -3,9 +3,11 @@
 void saludar(){
   print("hola corazon");
 }
+
 void escribeNombre(){
   print("dorle Zuñiga");
 }
+
 
 
 
@@ -17,6 +19,7 @@ void main(){
 
   print("Dorle Zuñiga mat.22308051281113"); 
   print("llamando a la funcion saludar");
+  
   saludar();
   print("llamando a la funcion escribeNombre");
   escribeNombre();
