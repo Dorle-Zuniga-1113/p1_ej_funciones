@@ -1,30 +1,57 @@
+import 'dart:io';
 void main() {
-  // Lista de números enteros
-  List<int> numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // Capturar la lista de números enteros
+  List<int> numeros = capturarDatos();
 
-  // Filtrar los números pares sin usar "where"
+  // Filtrar los números pares
   List<int> numerosPares = filtrarPares(numeros);
 
-  // Imprimir la lista de números pares
-
- print('Dorle irene zuñiga rodriguez mat.22308051281113');
-  print('Números pares: $numerosPares');
+  // Mostrar los números pares
+  mostrarElementos(numerosPares);
 }
 
-// Función para filtrar números pares sin usar "where"
+// Función para capturar los datos de la lista
+List<int> capturarDatos() {
+  // Lista vacía para almacenar los números
+  List<int> numeros = [];
+
+  // Solicitar al usuario la cantidad de números
+  print('Dorle irene zuñiga rodriguez mat.22308051281113');
+  print('¿Cuántos números deseas ingresar?');
+  int cantidad = int.parse(stdin.readLineSync()!);
+
+  // Capturar los números
+  for (int i = 0; i < cantidad; i++) {
+    print('Ingresa el número ${i + 1}:');
+    int numero = int.parse(stdin.readLineSync()!);
+    numeros.add(numero);
+  }
+
+  return numeros;
+}
+
+// Función para filtrar los números pares
 List<int> filtrarPares(List<int> numeros) {
   // Lista para almacenar los números pares
   List<int> pares = [];
 
   // Recorrer cada número en la lista
-  for (int i = 0; i < numeros.length; i++) {
+  for (int numero in numeros) {
     // Verificar si el número es par
-    if (numeros[i] % 2 == 0) {
+    if (numero % 2 == 0) {
       // Agregar el número par a la lista
-      pares.add(numeros[i]);
+      pares.add(numero);
     }
   }
 
-  // Devolver la lista de números pares
   return pares;
 }
+
+// Función para mostrar los elementos de la lista
+void mostrarElementos(List<int> lista) {
+  print('Los números pares son:');
+  for (int numero in lista) {
+    print(numero);
+  }
+}
+// print('Dorle irene zuñiga rodriguez mat.22308051281113');
