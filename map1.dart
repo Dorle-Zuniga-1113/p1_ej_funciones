@@ -14,6 +14,7 @@ void main() {
     11: 'Noviembre',
     12: 'Diciembre',
   };
+ // print("tabla empleado");
 
   // Imprimir el Map completo
   print('Meses del año: $mesesDelAnio');
@@ -28,4 +29,5 @@ void main() {
   // Acceder a un valor específico usando una clave
   int mesActual = 5;
   print('\nEl mes número $mesActual es: ${mesesDelAnio[mesActual]}');
+  //print("tabla empleado");
 }
